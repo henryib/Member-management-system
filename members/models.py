@@ -8,7 +8,7 @@ class Member(models.Model):
     email = models.EmailField(max_length=50)
     phone_number = models.PositiveIntegerField()
     hop = models.CharField(max_length=50)
-    date_joined = models.DateField(default=datetime.date.today())
+    date_joined = models.DateField(default=datetime.now)
     occupation = models.CharField(max_length=50)
     extra_notes = models.TextField()
 
