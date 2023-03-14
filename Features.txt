@@ -1,0 +1,10 @@
+Deploy app
+data visualisation page 
+
+user registration and login 
+member search 
+drop sown selection for hop 
+ 
+------ Extra features ----------
+Profile page 
+profile pictures 
