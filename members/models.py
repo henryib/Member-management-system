@@ -1,5 +1,6 @@
 from django.db import models
-import datetime
+from django.utils import timezone
+today = timezone.now
 
 # Create your models here.
 class Member(models.Model): 
@@ -8,7 +9,7 @@ class Member(models.Model):
     email = models.EmailField(max_length=50)
     phone_number = models.PositiveIntegerField()
     hop = models.CharField(max_length=50)
-    date_joined = models.DateField(default=datetime.now)
+    date_joined = models.DateField(default=today)
     occupation = models.CharField(max_length=50)
     extra_notes = models.TextField()
 
