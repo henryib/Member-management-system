@@ -31,7 +31,7 @@
                                     <td>
                                         <button class="btn btn-success me-1" href= "{% url 'view_member' member.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{member.id}}"><i class="fa-solid fa-circle-info fa-lg"></i></button>
                                        <!-- Modal Member view -->
-                                        <div class="modal" id="myModal{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel1" aria-hidden="true">
+                                        <div class="modal modal-sm" id="myModal{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel1" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                               <div class="modal-content">
                                                 <div class="modal-header">
@@ -70,7 +70,7 @@
                                           </button>
 
                                           <!-- Modal member delete-->
-                                          <div class="modal" id="delete{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel2" aria-hidden="true">
+                                          <div class="modal modal-sm" id="delete{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel2" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                               <div class="modal-content">
                                                 <div class="modal-header">
