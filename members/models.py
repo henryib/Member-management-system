@@ -7,7 +7,7 @@ class Member(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
-    phone_number = models.IntegerField()
+    phone_number = models.BigIntegerField()
     hop = models.CharField(max_length=50)
     date_joined = models.DateField(default=today)
     occupation = models.CharField(max_length=50)
