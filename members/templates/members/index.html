@@ -66,10 +66,10 @@
                                     <td data-title="Phone Number">{{ member.phone_number }}</td>
                                     <td data-title="HOP">{{ member.hop }}</td>
                                     <td>
-                                        <button class="btn btn-success me-1" href= "{% url 'view_member' member.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{member.id}}"><i class="fa-solid fa-circle-info fa-sm"></i></button>
+                                        <button class="btn btn-success me-1" href= "{% url 'view_member' member.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{member.id}}" ><i class="fa-solid fa-circle-info fa-sm"></i></button>
                                        <!-- Modal Member view -->
-                                        <div class="modal" id="myModal{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel1" aria-hidden="true" z-index="10000">
-                                            <div class="modal-dialog modal-fullscreen-sm-down" role="document">
+                                        <div class="modal" id="myModal{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel1" aria-hidden="true" data-bs-backdrop="false">
+                                            <div class="modal-dialog modal-fullscreen-sm-down " role="document" >
                                               <div class="modal-content">
                                                 <div class="modal-header">
                                                   <h5 class="modal-title">Member: {{ member.first_name}} {{ member.last_name}}</h5>
