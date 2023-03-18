@@ -22,6 +22,6 @@ class memberform(forms.ModelForm):
                   , 'hop': forms.TextInput(attrs={'class': 'form-control'})
                   , 'date_joined': forms.DateInput(attrs={'class': 'form-control'})
                   , 'occupation': forms.TextInput(attrs={'class': 'form-control'})
-                  , 'extra_notes': forms.TextInput(attrs={'class': 'form-control'})
+                  , 'extra_notes': forms.Textarea(attrs={'class': 'form-control'})
                   }
         
