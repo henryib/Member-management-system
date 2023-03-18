@@ -3,10 +3,19 @@ from django.urls import reverse
 from django.shortcuts import render
 from .models import Member
 from.forms import memberform
+from django.db.models import Q
 # Create your views here.
 
 
 def index(request): 
+    # search functionality
+    data = Member.objects.all()
+    if 'q' in request.GET:
+        q=request.GET['q']
+        return render(request, 'members/index.html', {
+           'members':  Member.objects.filter(Q(first_name__icontains=q)|Q(last_name__icontains=q))
+        })
+    
     return render(request, 'members/index.html', {
         'members': Member.objects.all() 
     })

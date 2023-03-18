@@ -32,7 +32,13 @@
   }
 }
 </style>
-<h3 class="m-4">  All members </h3>
+<h3 class="m-4">  All Members </h3>
+<form class="mb-4" action = "/">
+  <div class="input-group mb-3">
+    <input class="form-control "name="q" type="search" placeholder="Search (only first name or last name)"/>
+    <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+  </div>
+</form>
 <div class="row">
     <div class="col-12">
         {% if members %}
@@ -62,7 +68,7 @@
                                     <td>
                                         <button class="btn btn-success me-1" href= "{% url 'view_member' member.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{member.id}}"><i class="fa-solid fa-circle-info fa-sm"></i></button>
                                        <!-- Modal Member view -->
-                                        <div class="modal" id="myModal{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel1" aria-hidden="true">
+                                        <div class="modal" id="myModal{{member.id}}" tabindex = "-1" aria-lebelledby="myModalLabel1" aria-hidden="true" z-index="10000">
                                             <div class="modal-dialog modal-fullscreen-sm-down" role="document">
                                               <div class="modal-content">
                                                 <div class="modal-header">
@@ -82,6 +88,7 @@
                                                     <li>Date Joined: <strong>{{ member.date_joined}}</strong></li>
                                                     <li>Occupation: <strong>{{ member.occupation }}</strong></li>
                                                     <li>Extra Notes: <strong>{{ member.extra_notes}}</strong></li>
+                                                    <li><span class="badge bg-success">Commited</span></li>
                                                 
                                                   </ul>
                                                 </div>
