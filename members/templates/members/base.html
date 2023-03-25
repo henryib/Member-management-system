@@ -29,14 +29,26 @@
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'add'%}"><i class="fa-solid fa-plus me-1"></i> Add member</a>
                   </li>
+                 
                 </ul>
+                {% if user.is_authenticated %}
+                  <a href="/logout/" class="btn btn-danger">Logout</a>
+                {% endif %}
+                
               </div>
             </div>
           </nav>
           <div class="container-fluid">
-    
-            {% block body%}
-            {% endblock %}
+            {% if user.is_authenticated or request.path == "/login/"%}
+              {% block body %}
+              {% endblock %}
+            {% else %}
+            <div class="mb-2"></div>
+              <div class="alert alert-dismissible alert-warning">
+                <h4 class="alert-heading">Warning!</h4>
+                <p class="mb-0">You are not authorized to access this page  <a href="/login/" class="alert-link">Login in here</a>.</p>
+              </div>
+            {% endif %}
           </div> 
         <footer class = "mt-auto mb-4">
             <div class="text-center">

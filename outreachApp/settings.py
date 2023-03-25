@@ -125,3 +125,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Activate Django-heroku.
 django_heroku.settings(locals())
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/login"
